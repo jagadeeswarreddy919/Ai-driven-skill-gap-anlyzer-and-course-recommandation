@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #faf9ff;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-border: rgba(99, 102, 241, 0.12);
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --accent-purple: #7c3aed;
+    --accent-blue: #2563eb;
+  }
+
+  body {
+    background-color: #faf9ff;
+    color: #0f172a;
+    font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    selection-background-color: rgba(99, 102, 241, 0.2);
+    selection-color: #4f46e5;
+  }
+}
+
+/* Custom Light Background Grid & Ambient Glows */
+.bg-light-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+}
+
+.bg-ambient-glow {
+  background: radial-gradient(circle at 50% 10%, rgba(124, 58, 237, 0.08) 0%, rgba(79, 70, 229, 0.04) 40%, transparent 70%);
+}
+
+.gradient-heading-text {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sleek Premium Light Card Shadow & Border */
+.light-card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+}
+
+.light-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.light-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.12), 0 8px 20px -4px rgba(15, 23, 42, 0.06);
+}
+
+/* Light Sticky Glass Navbar */
+.light-glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(241, 245, 249, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf9ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
