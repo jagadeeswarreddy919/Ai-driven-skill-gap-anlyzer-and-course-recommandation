@@ -28,10 +28,6 @@ export default async function DashboardPage() {
     prisma.assessment.count({ where: { userId: user.id } }),
   ]);
 
-  const scoreColor = latestAssessment
-    ? latestAssessment.score >= 80 ? "emerald" : latestAssessment.score >= 60 ? "indigo" : latestAssessment.score >= 40 ? "amber" : "rose"
-    : "indigo";
-
   const quickTools = [
     { label: "Step-by-Step Analyzer", desc: "Benchmark skills against 20+ roles", href: "/analyzer", icon: Sparkles, color: "indigo" },
     { label: "Browse Target Roles", desc: "Explore technical career paths", href: "/roles", icon: Target, color: "purple" },
@@ -42,7 +38,7 @@ export default async function DashboardPage() {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto space-y-8 pb-12 font-sans"> text-slate-900
+    <div className="w-full max-w-7xl mx-auto space-y-8 pb-12 font-sans">
       {/* Hero Welcome Banner */}
       <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-800 text-white p-8 sm:p-10 shadow-xl shadow-indigo-500/10">
         {/* Decorative Background Mesh Glow */}
@@ -105,6 +101,7 @@ export default async function DashboardPage() {
           )}
         </div>
       </div>
+
       {/* Key Metric Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Metric 1: Latest Score */}
@@ -118,6 +115,7 @@ export default async function DashboardPage() {
             {latestAssessment ? <><span className="text-indigo-600 font-bold">{latestAssessment.label}</span> match</> : "No assessments run yet"}
           </div>
         </div>
+
         {/* Metric 2: Assessments */}
         <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs hover:shadow-md transition-all">
           <div className="flex items-center justify-between text-slate-500 mb-2">
@@ -127,6 +125,7 @@ export default async function DashboardPage() {
           <div className="text-3xl font-black text-slate-900">{totalAssessments}</div>
           <div className="text-xs font-semibold text-slate-500 mt-1">Total benchmark runs</div>
         </div>
+
         {/* Metric 3: Plan */}
         <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs hover:shadow-md transition-all">
           <div className="flex items-center justify-between text-slate-500 mb-2">
@@ -140,6 +139,7 @@ export default async function DashboardPage() {
             {plan === "FREE" ? "Upgrade Plan →" : "Manage Billing"}
           </Link>
         </div>
+
         {/* Metric 4: Analyses Remaining */}
         <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs hover:shadow-md transition-all">
           <div className="flex items-center justify-between text-slate-500 mb-2">
@@ -154,6 +154,7 @@ export default async function DashboardPage() {
           </div>
         </div>
       </div>
+
       {/* Latest Analysis Results Split Grid */}
       {latestAssessment ? (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -182,6 +183,7 @@ export default async function DashboardPage() {
               )}
             </div>
           </div>
+
           {/* Column 2: Priority Gaps & Recommended Courses */}
           <div className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-xs space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
@@ -253,6 +255,7 @@ export default async function DashboardPage() {
           </Link>
         </div>
       )}
+
       {/* Quick Navigation Tools Grid */}
       <div className="space-y-4">
         <h3 className="text-lg font-black text-slate-900">Career Intelligence Platform Tools</h3>
