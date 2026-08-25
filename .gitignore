@@ -46,4 +46,5 @@ next-env.d.ts
 *.db
 prisma/dev.db
 prisma/*.db
+!prisma/template.db
 
