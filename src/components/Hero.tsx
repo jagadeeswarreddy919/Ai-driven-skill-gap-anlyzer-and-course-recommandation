@@ -72,49 +72,18 @@ export const Hero: React.FC = () => {
           </a>
         </motion.div>
 
-        {/* User Avatars & Trust Rating */}
+        {/* Authentic Platform Trust Pill */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-10 flex items-center justify-center gap-4 flex-wrap"
+          className="mt-8 flex items-center justify-center"
         >
-          {/* Avatar Stack */}
-          <div className="flex -space-x-2 overflow-hidden">
-            <img
-              className="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover"
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
-              alt="Learner"
-            />
-            <img
-              className="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover"
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
-              alt="Learner"
-            />
-            <img
-              className="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
-              alt="Learner"
-            />
-            <img
-              className="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover"
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80"
-              alt="Learner"
-            />
-          </div>
-
-          {/* Stars & Text */}
-          <div className="text-left text-xs">
-            <div className="flex items-center gap-0.5 text-amber-400">
-              <Star className="w-4 h-4 fill-amber-400" />
-              <Star className="w-4 h-4 fill-amber-400" />
-              <Star className="w-4 h-4 fill-amber-400" />
-              <Star className="w-4 h-4 fill-amber-400" />
-              <Star className="w-4 h-4 fill-amber-400" />
-            </div>
-            <p className="text-slate-600 font-medium mt-0.5">
-              Trusted by <span className="font-bold text-slate-900">10,000+</span> learners to accelerate their careers
-            </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/90 text-xs font-semibold text-slate-700 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>100% Free Skill Analysis</span>
+            <span className="text-slate-300">•</span>
+            <span className="font-bold text-indigo-600">20+ Technical Career Paths</span>
           </div>
         </motion.div>
 
