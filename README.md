@@ -17,7 +17,7 @@
 - 📊 **Priority Skill Gap Breakdown**: Categorizes missing skills into *Critical*, *High*, and *Medium* priority items with actionable insights.
 - 📚 **Curated Course Recommendations**: Direct links to top-tier courses, official documentation, and video tutorials tailored to missing skills.
 - 🗺️ **Personalized Learning Roadmaps**: Week-by-week objective-based roadmaps with progress tracking.
-- 📄 **Pro Feature — Resume Analyzer**: Extract technical skills directly from uploaded PDF resumes and calculate target role readiness.
+- 📄 **Pro Feature — Resume Analyzer**: Powered by `unpdf` and regex pattern matching to extract 119+ technical skills directly from uploaded PDF/TXT resumes and auto-sync them to user skill profiles.
 - 🤖 **Pro Feature — AI Career Coach**: Interactive, context-aware AI career assistant providing personalized career advice.
 - 🔐 **Secure Authentication**:
   - Email & Password sign-up and log-in with bcrypt password hashing and Zod validation.
@@ -31,6 +31,7 @@
 ## 🛠️ Tech Stack
 
 - **Frontend & Server Components**: Next.js 16 (App Router), React 19, TypeScript
+- **PDF & Resume Processing**: `unpdf` (zero-dependency PDF text extraction engine)
 - **Styling & Animations**: Tailwind CSS v4, Framer Motion, Lucide React Icons
 - **Database & ORM**: Prisma ORM v6 with SQLite (Development & Vercel `/tmp` Serverless Auto-Initialization) or PostgreSQL (Production)
 - **Validation**: Zod schema validation
@@ -44,7 +45,7 @@
 ```text
 ├── prisma/
 │   ├── schema.prisma       # Database models (User, Account, Session, Role, Skill, Assessment, etc.)
-│   ├── seed.ts             # Seeding script for 110+ skills, 20 roles, and learning resources
+│   ├── seed.ts             # Seeding script for 119+ skills, 20 roles, and learning resources
 │   └── template.db         # Pre-seeded database template for Vercel serverless auto-initialization
 ├── src/
 │   ├── app/
