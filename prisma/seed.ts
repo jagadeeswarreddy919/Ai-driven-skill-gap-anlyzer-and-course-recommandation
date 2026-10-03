@@ -115,6 +115,15 @@ async function main() {
     { slug: "code-review", name: "Code Review & Mentoring", category: "Soft Skills" },
     { slug: "problem-solving", name: "Problem Solving & Algorithms", category: "Soft Skills" },
     { slug: "documentation", name: "Technical Documentation", category: "Soft Skills" },
+    { slug: "generative-ai", name: "Generative AI", category: "AI/ML" },
+    { slug: "machine-learning", name: "Machine Learning", category: "AI/ML" },
+    { slug: "deep-learning", name: "Deep Learning", category: "AI/ML" },
+    { slug: "full-stack", name: "Full Stack Development", category: "Software Development" },
+    { slug: "digital-electronics", name: "Digital Electronics", category: "Hardware & ECE" },
+    { slug: "circuit-design", name: "Circuit Design", category: "Hardware & ECE" },
+    { slug: "microcontrollers", name: "Microprocessors & Microcontrollers", category: "Hardware & ECE" },
+    { slug: "communication-signals", name: "Communication Signals", category: "Hardware & ECE" },
+    { slug: "ms-excel", name: "MS Excel & Spreadsheets", category: "Tools" },
   ];
 
   for (const skill of skillsData) {
@@ -344,6 +353,14 @@ async function main() {
     { skillSlug: "problem-solving", title: "Neetcode 150", url: "https://neetcode.io/practice", level: "Intermediate", hours: 40, provider: "Neetcode" },
     { skillSlug: "design-patterns", title: "Refactoring Guru Design Patterns", url: "https://refactoring.guru/design-patterns", level: "Intermediate", hours: 12, provider: "Refactoring Guru" },
     { skillSlug: "message-queues", title: "RabbitMQ Tutorials", url: "https://www.rabbitmq.com/tutorials", level: "Intermediate", hours: 8, provider: "RabbitMQ" },
+    { skillSlug: "generative-ai", title: "Generative AI Fundamentals", url: "https://www.coursera.org/learn/generative-ai-for-everyone", level: "Beginner", hours: 10, provider: "Coursera / DeepLearning.AI" },
+    { skillSlug: "machine-learning", title: "Machine Learning Specialization", url: "https://www.coursera.org/specializations/machine-learning-introduction", level: "Intermediate", hours: 30, provider: "Coursera / Stanford" },
+    { skillSlug: "deep-learning", title: "Deep Learning Specialization", url: "https://www.deeplearning.ai/courses/deep-learning-specialization/", level: "Advanced", hours: 40, provider: "DeepLearning.AI" },
+    { skillSlug: "full-stack", title: "Full Stack Open", url: "https://fullstackopen.com/en/", level: "Intermediate", hours: 50, provider: "University of Helsinki" },
+    { skillSlug: "digital-electronics", title: "Digital Electronics Course", url: "https://nptel.ac.in/courses/108105132", level: "Intermediate", hours: 30, provider: "NPTEL" },
+    { skillSlug: "circuit-design", title: "Introductory Circuit Design", url: "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/", level: "Intermediate", hours: 25, provider: "MIT OpenCourseWare" },
+    { skillSlug: "microcontrollers", title: "Microprocessors and Microcontrollers", url: "https://nptel.ac.in/courses/106108100", level: "Intermediate", hours: 30, provider: "NPTEL" },
+    { skillSlug: "ms-excel", title: "Excel Skills for Business", url: "https://www.coursera.org/specializations/excel", level: "Beginner", hours: 15, provider: "Macquarie University" },
   ];
 
   let resourceCount = 0;
